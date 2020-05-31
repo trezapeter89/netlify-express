@@ -5,7 +5,9 @@
   "main": "functions/server.js",
   "scripts": {
     "build": "netlify-lambda build express",
-    "start": "nodemon server-local.js"
+    "start": "concurrently 'yarn:start:app' 'yarn:start:func'",
+    "start:app": "nodemon server-local.js",
+    "start:func": "netlify-lambda serve express"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
     "express": "^4.17.1",
     "netlify-lambda": "^1.6.3",
     "nodemon": "^1.19.2",
-    "serverless-http": "^2.3.0"
+    "serverless-http": "^2.3.0",
+    "concurrently": "^5.2.0"
   }
 }
