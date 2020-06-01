@@ -19,4 +19,11 @@ how to access the Express.js endpoints:
 curl http://localhost:3000/.netlify/functions/server
 curl http://localhost:3000/.netlify/functions/server/another
 curl --header "Content-Type: application/json" --request POST --data '{"json":"POST"}' http://localhost:3000/.netlify/functions/server
+curl http://localhost:3000/.netlify/functions/server/todos
 ```
+
+Plese define environment variable for mongoconnection
+
+MONGO_CLUSTER
+MONGO_PASSWORD
+MONGO_USER

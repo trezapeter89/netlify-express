@@ -28,8 +28,11 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "netlify-lambda": "^1.6.3",
-    "nodemon": "^1.19.2",
-    "serverless-http": "^2.3.0",
-    "concurrently": "^5.2.0"
+    "nodemon": "^2.0.4",
+    "serverless-http": "^2.5.0",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "mongoose": "^5.9.16",
+    "dotenv": "^5.0.1"
   }
 }
