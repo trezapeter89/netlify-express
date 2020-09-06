@@ -22,8 +22,16 @@ curl --header "Content-Type: application/json" --request POST --data '{"json":"P
 curl http://localhost:3000/.netlify/functions/server/todos
 ```
 
-Plese define environment variable for mongoconnection
+Plese define environment variable for mongoconnection in .env file
 
-MONGO_CLUSTER
-MONGO_PASSWORD
-MONGO_USER
+MONGO_CLUSTER=<Cluster>
+MONGO_PASSWORD=<Password>
+MONGO_USER=<User>
+
+on deployed app
+
+App : https://express-demo.netlify.app/.netlify/functions/server/another
+
+https://express-demo.netlify.app/.netlify/functions/server
+
+https://express-demo.netlify.app/.netlify/functions/server/todos
