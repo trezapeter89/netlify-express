@@ -4,6 +4,7 @@ const path = require('path');
 const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
+const axios = require('axios').default;
 const cors = require('cors');
 const mongoose = require('mongoose');
 
@@ -40,7 +41,18 @@ router.get('/todos', (req, res) => {
   });
 });
 
+router.get('/vac', async (req, res) => {
+  console.log("###########################")
 
+  const request = await axios.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=651&date=23-05-2021', {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
+    }
+  })
+
+console.log(request.data)
+  res.json(request.data);
+});
 
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
 router.post('/', (req, res) => res.json({ postBody: req.body }));
