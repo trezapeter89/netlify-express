@@ -41,7 +41,7 @@ router.get('/todos', (req, res) => {
   });
 });
 
-router.get('/vac', async (req, res) => {
+router.post('/vac', async (req, res) => {
   console.log("###########################");
   console.log(req.headers);
   console.log("#################");
