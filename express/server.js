@@ -42,15 +42,15 @@ router.get('/todos', (req, res) => {
 });
 
 router.get('/vac', async (req, res) => {
-  console.log("###########################")
-
-  const request = await axios.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=651&date=23-05-2021', {
+  console.log("###########################");
+  console.log(req.headers);
+  console.log("#################");
+  //const request = await axios.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=651&date=23-05-2021', {
+  const request = await axios.get('https://www.npmjs.com/package/axios', {
     headers: {
       'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
     }
   })
-
-console.log(request.data)
   res.json(request.data);
 });
 
